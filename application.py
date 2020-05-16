@@ -11,6 +11,7 @@ app.config.from_pyfile("config/base_setting.py")
 # windows set ops_config=local|production
 # import pdb; pdb.set_trace()
 os.environ['ops_config'] = 'local'
+# os.environ['ops_config'] = 'production'
 if "ops_config" in os.environ:
     app.config.from_pyfile("config/%s_setting.py" % (os.environ['ops_config']))
 
